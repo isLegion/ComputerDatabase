@@ -1,0 +1,129 @@
+1. Check that computer with all correct fields was created
+Precondition:
+fields -  name = "Alias", introduced date = "2014-06-12", discontinued Date = "2016-07-20", company = "Apple Inc."
+
+Steps:
+- open Main Page with existing computers
+- click on "Add a new computer" button
+- in opened page "Add a computer" fill all fields
+- click "Create this computer"
+Result:
+Computer is added in list of computers
+Message "Done! Computer Computer.name has been created" appears
+
+2.Check that existing computer was removed
+Precondition:
+Computer was created with fields - name = "Alias", introduced date = "2014-06-12", discontinued Date = "2016-07-20",
+company = "Apple Inc."
+
+Steps:
+ - open Main Page
+ - search Computer
+ - click on Computer name
+ - in opened page "Add a computer" click on delete button
+ Result:
+ Computer is not exist in the list
+ Message "Done! Computer has been deleted" id appeared
+
+ 3.Check that cancel button works correctly
+ Precondition
+ Computer was created with fields - name = "Alias", introduced date = "2014-06-12", discontinued Date = "2016-07-20",
+ company = "Apple Inc."
+
+ Steps:
+ - click on Computer
+ - im opened page "Add a computer" click on cancel button
+ Result:
+ unchanged Computer is still in the list
+
+ 4.Check that existing computer was edited successfully
+Precondition
+ Computer was created with fields - name = "Alias", introduced date = "2014-06-12", discontinued Date = "2016-07-20",
+ company = "Apple Inc."
+ Computer1 with fields - name = "newAlias", introduced date = "2015-07-12", discontinued Date = "2018-10-01",
+ company = "RCA"
+
+ Steps:
+ - click on Computer
+ - in opened page "Add a computer" fill all fields with Computer1 values
+ - click "Create this computer"
+ Result:
+ Computer1 was added in the list
+ Message "Done! Computer Computer1.name has been updated"
+
+ 5.Check that search of existing computer works correct
+ Precondition
+ Computer was created with fields - name = "Alias", introduced date = "2014-06-12", discontinued Date = "2016-07-20",
+ company = "Apple Inc."
+
+ Steps:
+  - search by full name of Computer
+  Result: Computer was founded
+  - search by half name of Computer
+  Result: Computer was founded
+  - search with different name
+  Result: Computer was not founded
+
+6.Check creating computer with minimal needed fields
+Steps:
+- click on "Add a new computer" button
+- in opened page "Add a computer" fill only field "name"
+- click "Create this computer
+Result:
+Computer with "name" is added in list, column introduced date, discontinued Date and company are empty
+
+7.Check validation for introduced and discontinued fields
+Preparation:
+fields {
+introduced date = 2014/06/12
+discontinued date = 2014/06/12
+
+introduced date = dnjknj123
+discontinued date = dnjknj123
+
+introduced date = 12-06-2014
+discontinued date = 12-06-2014
+
+introduced date = 12 Jun 2014
+discontinued date = 12 Jun 2014
+}
+Steps:
+- open Main Page with existing computers
+- click on "Add a new computer" button
+- in opened page "Add a computer" fill values of fields {}
+Result:
+introduced date and discontinued date were red color highlighted
+
+8.Check validation for name field
+Precondition:
+fields {
+name = name with numbers
+name = long name (100 symbols)
+name = with symbols like "#%#%&@@"
+}
+Steps:
+- open Main Page with existing computers
+- click on "Add a new computer" button
+- in opened page "Add a computer" fill values of fields {}
+Result:
+Computer is added in list of computers
+Message "Done! Computer Computer.name has been created" appears
+- with empty name
+Result:
+name field was red color highlighted
+
+9.Check increase quantity of computers  after creating one
+Precondition:
+increment value of computers quantity
+Steps:
+ - add new Computer
+Result:
+quantity was increased +1
+
+10.Check decrease quantity of computers  after removing one
+Precondition:
+increment value of computers quantity
+Steps:
+ - delete existing Computer
+Result:
+quantity was decreased -1
