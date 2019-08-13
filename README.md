@@ -5,6 +5,7 @@ Java 8
 
 # Tools
 [Selenide](https://selenide.org/) + JUnit5
+ALso you need set up Lombok plugin
 
 # To run tests:
 
