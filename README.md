@@ -1,15 +1,16 @@
 # ComputerDatabase
 
 # Language
-Java 8
+  * Java 8
 
 # Tools
 [Selenide](https://selenide.org/) + JUnit5
-ALso you need set up Lombok plugin
+
+  * Also you need set up Lombok plugin
 
 # To run tests:
 
-   * mvn clean test
+  * mvn clean test
    
 # Manual test cases
  
